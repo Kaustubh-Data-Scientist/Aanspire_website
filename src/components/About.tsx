@@ -54,49 +54,62 @@ export default function About() {
                         </div>
                     </motion.div>
 
-                    {/* Visual Element */}
+                    {/* New Bento Box Visual Element */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="relative"
+                        className="grid grid-cols-2 gap-4 relative"
                     >
-                        <div className="aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-gray-900 to-black border border-white/10 p-8 shadow-2xl relative overflow-hidden group">
-                            {/* Glassmorphism overlays */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-[#20B2AA]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        {/* Glow Behind Grid */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-[#20B2AA]/20 to-transparent blur-3xl -z-10 opacity-70"></div>
 
-                            {/* Abstract UI representation */}
-                            <div className="h-full w-full rounded-2xl border border-white/5 bg-[#0a0f12]/80 backdrop-blur-sm p-6 flex flex-col gap-4 relative z-10 translate-y-8 group-hover:translate-y-4 transition-transform duration-700">
-                                <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                                    <div className="w-20 h-4 rounded-full bg-white/10 animate-pulse"></div>
-                                    <div className="flex gap-2">
-                                        <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-                                        <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                                        <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-                                    </div>
-                                </div>
-                                <div className="space-y-3 mt-4">
-                                    <div className="w-full h-8 rounded-lg bg-white/5"></div>
-                                    <div className="w-3/4 h-8 rounded-lg bg-white/5"></div>
-                                    <div className="w-5/6 h-8 rounded-lg bg-white/5"></div>
-                                </div>
-                                <div className="mt-auto flex gap-4">
-                                    <div className="w-1/2 h-24 rounded-xl bg-gradient-to-br from-[#20B2AA]/20 to-transparent border border-[#20B2AA]/20"></div>
-                                    <div className="w-1/2 h-24 rounded-xl bg-white/5 border border-white/5"></div>
-                                </div>
+                        {/* Top Left Card - Premium Stat */}
+                        <div className="col-span-1 aspect-square rounded-[2rem] bg-gradient-to-br from-white/[0.05] to-transparent border border-white/10 p-6 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-500 overflow-hidden relative group">
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#20B2AA]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="w-10 h-10 rounded-full bg-[#20B2AA]/10 flex items-center justify-center border border-[#20B2AA]/20">
+                                <Building2 className="w-5 h-5 text-[#20B2AA]" />
+                            </div>
+                            <div>
+                                <h4 className="text-4xl font-bold text-white mb-1">10+</h4>
+                                <p className="text-sm font-medium text-gray-400">Products Incubated</p>
                             </div>
                         </div>
 
-                        {/* Floating badge */}
-                        <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -bottom-6 -left-6 p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl"
-                        >
-                            <div className="text-4xl font-bold text-white mb-1">10+</div>
-                            <div className="text-sm font-medium text-[#20B2AA]">Products in Pipeline</div>
-                        </motion.div>
+                        {/* Top Right Card - Abstract Chart */}
+                        <div className="col-span-1 aspect-square rounded-[2rem] bg-white/[0.02] border border-white/5 p-6 flex flex-col hover:-translate-y-2 transition-transform duration-500 overflow-hidden relative group">
+                            <h4 className="text-sm font-medium text-gray-400 mb-6 z-10">Network Growth</h4>
+                            <div className="mt-auto flex items-end gap-2 h-24 z-10">
+                                {[40, 60, 45, 80, 55, 100].map((height, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ height: "0%" }}
+                                        whileInView={{ height: `${height}%` }}
+                                        transition={{ duration: 1, delay: 0.2 + (i * 0.1) }}
+                                        className="w-full bg-gradient-to-t from-[#20B2AA]/80 to-[#20B2AA]/20 rounded-t-sm"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Bottom Full Card - Ecosystem Tagline */}
+                        <div className="col-span-2 rounded-[2rem] bg-white/[0.03] border border-white/5 p-8 hover:-translate-y-2 transition-transform duration-500 flex items-center justify-between group overflow-hidden relative">
+                            {/* Animated line moving across */}
+                            <motion.div
+                                animate={{ x: ["-100%", "200%"] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                                className="absolute top-0 left-0 w-1/2 h-px bg-gradient-to-r from-transparent via-[#20B2AA] to-transparent opacity-50"
+                            />
+
+                            <div>
+                                <h4 className="text-lg font-bold text-white mb-2">Centralized Power</h4>
+                                <p className="text-sm text-gray-400">One parent hub, infinite possibilities.</p>
+                            </div>
+                            <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#20B2AA]/20 group-hover:border-[#20B2AA]/50 group-hover:text-[#20B2AA] transition-all duration-300">
+                                <Globe2 className="w-5 h-5" />
+                            </div>
+                        </div>
                     </motion.div>
 
                 </div>

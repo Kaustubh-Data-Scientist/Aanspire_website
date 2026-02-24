@@ -91,16 +91,16 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <button className="group relative px-8 py-4 rounded-full bg-[#20B2AA] text-white font-medium text-base hover:bg-[#1a908a] transition-all flex items-center gap-2 overflow-hidden shadow-[0_0_40px_-10px_#20B2AA]">
+                    <a href="#products" className="group relative px-8 py-4 rounded-full bg-[#20B2AA] text-white font-medium text-base hover:bg-[#1a908a] transition-all flex items-center gap-2 overflow-hidden shadow-[0_0_40px_-10px_#20B2AA]">
                         <span className="relative z-10">Explore Products</span>
                         <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                    </button>
+                    </a>
 
-                    <button className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-medium text-base hover:bg-white/10 transition-all backdrop-blur-md flex items-center gap-2">
+                    <a href="mailto:contact@aanspire.com" className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-medium text-base hover:bg-white/10 transition-all backdrop-blur-md flex items-center gap-2">
                         Contact Us
                         <ChevronRight className="w-4 h-4 opacity-70" />
-                    </button>
+                    </a>
                 </motion.div>
             </motion.div>
         </section>

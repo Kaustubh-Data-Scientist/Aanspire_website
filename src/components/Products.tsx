@@ -23,7 +23,8 @@ const products = [
         description: "Enterprise-grade player auction software for sports leagues. Real-time bidding, wallet management, and auto-sync.",
         icon: <Gavel className="w-8 h-8 text-blue-400" />,
         color: "from-blue-400/20 to-transparent",
-        border: "group-hover:border-blue-400/50"
+        border: "group-hover:border-blue-400/50",
+        comingSoon: true
     },
     {
         title: "More Coming Soon",

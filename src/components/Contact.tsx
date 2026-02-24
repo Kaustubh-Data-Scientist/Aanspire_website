@@ -31,8 +31,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 mb-1 font-medium tracking-wide">EMAIL US</p>
-                                    <a href="mailto:hello@aanspire.com" className="text-xl text-white font-medium hover:text-[#20B2AA] transition-colors">
-                                        hello@aanspire.com
+                                    <a href="mailto:contact@aanspire.com" className="text-xl text-white font-medium hover:text-[#20B2AA] transition-colors">
+                                        contact@aanspire.com
                                     </a>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ export default function Contact() {
                                 <div>
                                     <p className="text-sm text-gray-500 mb-1 font-medium tracking-wide">HEADQUARTERS</p>
                                     <p className="text-xl text-white font-medium">
-                                        Global Tech Hub
+                                        Nashik, Maharashtra
                                     </p>
                                 </div>
                             </div>

@@ -13,9 +13,9 @@ export default function Navbar() {
                     <Link href="#vision" className="hover:text-white transition-colors">Vision</Link>
                     <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
                 </div>
-                <button className="bg-[#20B2AA] hover:bg-[#1a908a] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#20B2AA]/20">
+                <a href="mailto:contact@aanspire.com" className="bg-[#20B2AA] hover:bg-[#1a908a] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#20B2AA]/20 inline-block">
                     Let's Talk
-                </button>
+                </a>
             </div>
         </nav>
     );
